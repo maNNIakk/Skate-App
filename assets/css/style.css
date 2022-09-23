@@ -25,10 +25,6 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 
-a {
-    align-self: center;
-}
-
 .cabecalho__menu i::before {
     content: "\e904";
     font-size: 24px;
@@ -323,7 +319,6 @@ button {
     .cartao__botao--destaque {
         grid-column: auto;
         padding: 16px 8px;
-        align-self: center;
     }
 
     .cartao--recentes {
