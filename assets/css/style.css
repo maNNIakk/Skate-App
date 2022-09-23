@@ -25,6 +25,10 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
 }
 
+a {
+    align-self: center;
+}
+
 .cabecalho__menu i::before {
     content: "\e904";
     font-size: 24px;
@@ -98,7 +102,6 @@ body {
     background-color: #15191C;
     width: 75vw;
     height: 100vh;
-
     position: absolute;
     left: -100vw;
     transition: .25s;
@@ -107,6 +110,8 @@ body {
 .menu-lateral--ativo {
     left: 0;
     transition: .25s;
+    position: fixed;
+    top: 0;
 }
 
 .menu-lateral__logo {
@@ -250,6 +255,7 @@ body {
     display: flex;
     align-items: center;
     color: #95999C;
+    justify-self: right;
 }
 
 .cartao__info--tempo::before {
@@ -259,13 +265,13 @@ body {
 
 .cartao__info--visualizacao::before {
     content: "\e90f";
-    margin-right: 8px;    
+    margin-right: 8px; 
 }
 
 .cartao__botao {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     background-color: #0480DC;
     width: 40px;
     height: 40px;
@@ -277,6 +283,11 @@ body {
 .cartao__botao--play::before {
     content: "\e90b";
     font-size: 24px;
+    align-self: center;
+}
+
+button {
+    cursor: pointer;
 }
 
 .cartao__botao--destaque {
@@ -297,6 +308,10 @@ body {
         margin-bottom: 0;
     }
 
+    .cartao__info {
+        justify-self: left;
+    }
+
     .cartao__imagem--mobile {
         display: none;
     }
@@ -304,10 +319,11 @@ body {
     .cartao__imagem--desktop {
         display: block;
     }
-
+    
     .cartao__botao--destaque {
         grid-column: auto;
         padding: 16px 8px;
+        align-self: center;
     }
 
     .cartao--recentes {
